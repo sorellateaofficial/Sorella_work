@@ -1,0 +1,18 @@
+{
+  "name": "sorella-tea-pos",
+  "version": "1.0.0",
+  "description": "Sorella Tea iPad Touch POS",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@netlify/database": "^2.0.0",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-beta.22"
+  }
+}

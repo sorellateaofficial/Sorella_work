@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#d98ca0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#e98d99">
+<title>Sorella Tea iPad Touch POS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="assets/Sorella_Logo.jpg" alt="Sorella Tea — Sweet Sips, Sisterly Love">
+    </div>
+    <div class="top-actions">
+      <div class="pill" id="clock">--:--</div>
+      <button class="pill" id="backupBtn">Backup</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <button class="nav active" data-view="order">🛍️ <span>New Order</span></button>
+      <button class="nav" data-view="sales">🧾 <span>Sales</span></button>
+      <button class="nav" data-view="manage">⚙️ <span>Manage</span></button>
+      <button class="nav" data-view="copilot">🤖 <span>Sorella AI</span></button>
+      <button class="nav" data-view="reports">📊 <span>Reports</span></button>
+      <button class="nav" data-view="settings">🧰 <span>Settings</span></button>
+      <div class="side-note">Brewed with<br><b>Sisterly Love</b> ♥</div>
+    </aside>
+    <main class="main">
+      <section id="orderView" class="view">
+        <div class="category-bar" id="categoryBar"></div>
+        <div class="series-bar" id="seriesBar"></div>
+        <div class="content-split">
+          <div class="products-panel">
+            <div class="section-title"><span id="sectionTitle">ALL</span><small id="itemCount"></small></div>
+            <div id="productGrid" class="product-grid"></div>
+          </div>
+          <aside class="order-panel">
+            <div class="panel-title">ORDER SUMMARY <span id="orderCount" class="badge">0</span></div>
+            <div id="orderList" class="order-list"></div>
+            <div class="totals">
+              <div><span>SUBTOTAL</span><b id="subtotal">₱0.00</b></div>
+              <div class="inline-control"><span>DISCOUNT (%)</span><input id="discount" type="number" min="0" max="100" value="0"><button id="discountApply">ENTER</button></div>
+              <div><span>DISCOUNT</span><b id="discountAmt">- ₱0.00</b></div>
+              <div class="grand"><span>TOTAL</span><b id="total">₱0.00</b></div>
+              <div class="inline-control"><span>CASH RECEIVED</span><input id="cash" type="number" min="0" placeholder="0"><button id="cashApply">ENTER</button></div>
+              <div class="change"><span>CHANGE</span><b id="change">₱0.00</b></div>
+            </div>
+            <div class="action-row">
+              <button class="outline" id="reviewBtn">👁 Review Order</button>
+              <button class="soft" id="holdBtn">⏸ Hold</button>
+              <button class="primary" id="doneBtn">✓ Done Order</button>
+            </div>
+            <div class="quick-cash"><button data-cash="100">₱100</button><button data-cash="200">₱200</button><button data-cash="500">₱500</button><button data-cash="1000">₱1,000</button><button id="clearBtn">🗑 Clear</button></div>
+            <button class="soft" id="heldBtn" style="margin-top:8px;min-height:40px;border-radius:12px;font-weight:800">📋 Held Orders <span id="heldCount" class="badge">0</span></button>
+          </aside>
+        </div>
+      </section>
+      <section id="salesView" class="view hidden"></section>
+      <section id="manageView" class="view hidden"></section>
+      <section id="copilotView" class="view hidden"></section>
+      <section id="reportsView" class="view hidden"></section>
+      <section id="settingsView" class="view hidden"></section>
+    </main>
+  </div>
+</div>
+
+<div id="itemModal" class="modal hidden"><div class="modal-card compact" id="itemModalCard"></div></div>
+<div id="reviewModal" class="modal hidden"><div class="modal-card review-card" id="reviewCard"></div></div>
+<div id="toast" class="toast hidden"></div>
+<input id="importInput" type="file" accept=".json,.xlsx" hidden>
+<script src="offline-store.js"></script>
+<script src="app.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/service-worker.js").catch(console.warn)}</script>
+</body>
+</html>

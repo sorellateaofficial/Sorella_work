@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8f3"/><stop offset="1" stop-color="#fff1ea"/></linearGradient><linearGradient id="tea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8c9a9"/><stop offset="1" stop-color="#c89568"/></linearGradient></defs>
+<rect width="1000" height="1000" rx="80" fill="url(#bg)"/>
+<ellipse cx="500" cy="825" rx="190" ry="34" fill="#e6d1ca" opacity=".55"/>
+<path d="M335 285h330l-28 505c-2 35-31 60-66 60H429c-35 0-64-25-66-60z" fill="url(#tea)" stroke="#b98562" stroke-width="8"/>
+<path d="M325 270h350v45H325z" fill="#f8f4f0" stroke="#b98562" stroke-width="8"/>
+<path d="M455 270V120h30v150" stroke="#6b4a40" stroke-width="12" fill="none"/>
+<path d="M485 135c20-45 44-55 72-58" stroke="#6b4a40" stroke-width="12" fill="none"/>
+<circle cx="425" cy="700" r="18" fill="#4a2922"/><circle cx="490" cy="730" r="18" fill="#4a2922"/><circle cx="555" cy="690" r="18" fill="#4a2922"/>
+<rect x="385" y="470" width="230" height="125" rx="22" fill="#fff8f3" opacity=".94"/>
+<text x="500" y="520" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#4a2922">SORELLA</text>
+<text x="500" y="565" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#e88997">TEA</text>
+</svg>
